@@ -1,0 +1,5 @@
+set -tmpdir "C:/Users/pablo/OneDrive/Escritorio/P7_FC/PRACTICA_7/xst/projnav.tmp"
+set -xsthdpdir "C:/Users/pablo/OneDrive/Escritorio/P7_FC/PRACTICA_7/xst"
+elaborate
+-ifn .prj
+-ifmt mixed

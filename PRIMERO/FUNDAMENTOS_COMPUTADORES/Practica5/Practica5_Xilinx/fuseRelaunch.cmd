@@ -1,0 +1,1 @@
+-intstyle "ise" -incremental -o "C:/Users/Digitales/Desktop/Practica5FC/T_Practica5FC_isim_beh.exe" -prj "C:/Users/Digitales/Desktop/Practica5FC/T_Practica5FC_beh.prj" "work.T_Practica5FC" 

@@ -1,0 +1,8 @@
+INTSTYLE=ise
+INFILE=D:\Practicas FC\Practica5FC\FC_P5.ncd
+OUTFILE=D:\Practicas FC\Practica5FC\FC_P5.bit
+FAMILY=Spartan3E
+PART=xc3s500e-4fg320
+WORKINGDIR=D:\Practicas FC\Practica5FC
+LICENSE=WebPack
+USER_INFO=211410843_0_0_350
