@@ -1,0 +1,396 @@
+
+
+*******************************************************************************
+Sat May 28 11:23:50 2022
+
+
+FIT:    data read from "Ternaria.dat" using 1:2
+        format = x:z
+        #datapoints = 10
+        residuals are weighted equally (unit weight)
+
+function used for fitting: LogN(x)
+	LogN(x)=a*log(x)+b
+fitted parameters initialized with current variable values
+
+iter      chisq       delta/lim  lambda   a             b            
+   0 5.1112671128e+02   0.00e+00  4.41e+00    1.000000e+00   1.000000e+00
+   6 3.3988634838e-09  -2.43e-11  4.41e-03    4.847842e-07   1.970352e-04
+
+After 6 iterations the fit converged.
+final sum of squares of residuals : 3.39886e-09
+rel. change during last iteration : -2.4337e-16
+
+degrees of freedom    (FIT_NDF)                        : 8
+rms of residuals      (FIT_STDFIT) = sqrt(WSSR/ndf)    : 2.06121e-05
+variance of residuals (reduced chisquare) = WSSR/ndf   : 4.24858e-10
+
+Final set of parameters            Asymptotic Standard Error
+=======================            ==========================
+a               = 4.84784e-07      +/- 9.373e-06    (1933%)
+b               = 0.000197035      +/- 5.769e-05    (29.28%)
+
+correlation matrix of the fit parameters:
+                a      b      
+a               1.000 
+b              -0.994  1.000 
+
+
+*******************************************************************************
+Sat May 28 11:24:09 2022
+
+
+FIT:    data read from "Ternaria.dat" using 1:2
+        format = x:z
+        #datapoints = 10
+        residuals are weighted equally (unit weight)
+
+function used for fitting: LogN(x)
+	LogN(x)=a*log(x)+b
+fitted parameters initialized with current variable values
+
+iter      chisq       delta/lim  lambda   a             b            
+   0 5.1112866689e+02   0.00e+00  4.41e+00    1.000000e+00   1.000000e+00
+   5 2.5302422982e-08  -7.14e-01  4.41e-05   -2.514487e-05   3.417762e-04
+
+After 5 iterations the fit converged.
+final sum of squares of residuals : 2.53024e-08
+rel. change during last iteration : -7.14499e-06
+
+degrees of freedom    (FIT_NDF)                        : 8
+rms of residuals      (FIT_STDFIT) = sqrt(WSSR/ndf)    : 5.62388e-05
+variance of residuals (reduced chisquare) = WSSR/ndf   : 3.1628e-09
+
+Final set of parameters            Asymptotic Standard Error
+=======================            ==========================
+a               = -2.51449e-05     +/- 2.557e-05    (101.7%)
+b               = 0.000341776      +/- 0.0001574    (46.06%)
+
+correlation matrix of the fit parameters:
+                a      b      
+a               1.000 
+b              -0.994  1.000 
+
+
+*******************************************************************************
+Sat May 28 11:24:27 2022
+
+
+FIT:    data read from "Ternaria.dat" using 1:2
+        format = x:z
+        #datapoints = 10
+        residuals are weighted equally (unit weight)
+
+function used for fitting: LogN(x)
+	LogN(x)=a*log(x)+b
+fitted parameters initialized with current variable values
+
+iter      chisq       delta/lim  lambda   a             b            
+   0 5.1112691901e+02   0.00e+00  4.41e+00    1.000000e+00   1.000000e+00
+   6 1.6815911174e-08   0.00e+00  4.41e-04    8.435210e-06   1.464135e-04
+
+After 6 iterations the fit converged.
+final sum of squares of residuals : 1.68159e-08
+rel. change during last iteration : 0
+
+degrees of freedom    (FIT_NDF)                        : 8
+rms of residuals      (FIT_STDFIT) = sqrt(WSSR/ndf)    : 4.58475e-05
+variance of residuals (reduced chisquare) = WSSR/ndf   : 2.10199e-09
+
+Final set of parameters            Asymptotic Standard Error
+=======================            ==========================
+a               = 8.43521e-06      +/- 2.085e-05    (247.2%)
+b               = 0.000146414      +/- 0.0001283    (87.64%)
+
+correlation matrix of the fit parameters:
+                a      b      
+a               1.000 
+b              -0.994  1.000 
+
+
+*******************************************************************************
+Sat May 28 11:26:32 2022
+
+
+FIT:    data read from "Ternaria.dat" using 1:2
+        format = x:z
+        #datapoints = 10
+        residuals are weighted equally (unit weight)
+
+function used for fitting: LogN(x)
+	LogN(x)=a*log(x)+b
+fitted parameters initialized with current variable values
+
+iter      chisq       delta/lim  lambda   a             b            
+   0 5.1112396832e+02   0.00e+00  4.41e+00    1.000000e+00   1.000000e+00
+   6 9.4983302229e-09  -1.74e-11  4.41e-06   -1.018520e-05   2.822887e-04
+
+After 6 iterations the fit converged.
+final sum of squares of residuals : 9.49833e-09
+rel. change during last iteration : -1.74174e-16
+
+degrees of freedom    (FIT_NDF)                        : 8
+rms of residuals      (FIT_STDFIT) = sqrt(WSSR/ndf)    : 3.44571e-05
+variance of residuals (reduced chisquare) = WSSR/ndf   : 1.18729e-09
+
+Final set of parameters            Asymptotic Standard Error
+=======================            ==========================
+a               = -1.01852e-05     +/- 1.567e-05    (153.8%)
+b               = 0.000282289      +/- 9.644e-05    (34.16%)
+
+correlation matrix of the fit parameters:
+                a      b      
+a               1.000 
+b              -0.994  1.000 
+
+
+*******************************************************************************
+Sat May 28 11:27:35 2022
+
+
+FIT:    data read from "Ternaria.dat" using 1:2
+        format = x:z
+        #datapoints = 10
+        residuals are weighted equally (unit weight)
+
+function used for fitting: LogN(x)
+	LogN(x)=a*log(x)+b
+fitted parameters initialized with current variable values
+
+iter      chisq       delta/lim  lambda   a             b            
+   0 5.1112799129e+02   0.00e+00  4.41e+00    1.000000e+00   1.000000e+00
+   6 1.1257201462e-08   0.00e+00  4.41e+01   -4.357608e-05   4.604944e-04
+
+After 6 iterations the fit converged.
+final sum of squares of residuals : 1.12572e-08
+rel. change during last iteration : 0
+
+degrees of freedom    (FIT_NDF)                        : 8
+rms of residuals      (FIT_STDFIT) = sqrt(WSSR/ndf)    : 3.7512e-05
+variance of residuals (reduced chisquare) = WSSR/ndf   : 1.40715e-09
+
+Final set of parameters            Asymptotic Standard Error
+=======================            ==========================
+a               = -4.35761e-05     +/- 1.706e-05    (39.15%)
+b               = 0.000460494      +/- 0.000105     (22.8%)
+
+correlation matrix of the fit parameters:
+                a      b      
+a               1.000 
+b              -0.994  1.000 
+
+
+*******************************************************************************
+Sat May 28 11:28:30 2022
+
+
+FIT:    data read from "Ternaria.dat" using 1:2
+        format = x:z
+        #datapoints = 10
+        residuals are weighted equally (unit weight)
+
+function used for fitting: LogN(x)
+	LogN(x)=a*log(x)+b
+fitted parameters initialized with current variable values
+
+iter      chisq       delta/lim  lambda   a             b            
+   0 5.1112505133e+02   0.00e+00  4.41e+00    1.000000e+00   1.000000e+00
+   5 2.3576588658e-08  -7.66e-01  4.41e-05   -7.801551e-05   6.941125e-04
+
+After 5 iterations the fit converged.
+final sum of squares of residuals : 2.35766e-08
+rel. change during last iteration : -7.66141e-06
+
+degrees of freedom    (FIT_NDF)                        : 8
+rms of residuals      (FIT_STDFIT) = sqrt(WSSR/ndf)    : 5.4287e-05
+variance of residuals (reduced chisquare) = WSSR/ndf   : 2.94707e-09
+
+Final set of parameters            Asymptotic Standard Error
+=======================            ==========================
+a               = -7.80155e-05     +/- 2.469e-05    (31.64%)
+b               = 0.000694113      +/- 0.0001519    (21.89%)
+
+correlation matrix of the fit parameters:
+                a      b      
+a               1.000 
+b              -0.994  1.000 
+
+
+*******************************************************************************
+Sat May 28 11:47:04 2022
+
+
+FIT:    data read from "Ternaria.dat" using 1:2
+        format = x:z
+        #datapoints = 10
+        residuals are weighted equally (unit weight)
+
+function used for fitting: LogN(x)
+	LogN(x)=a*log(x)+b
+fitted parameters initialized with current variable values
+
+iter      chisq       delta/lim  lambda   a             b            
+   0 5.1112581770e+02   0.00e+00  4.41e+00    1.000000e+00   1.000000e+00
+   6 5.5146911868e-09  -3.00e-11  4.41e-06   -1.012042e-05   2.688926e-04
+
+After 6 iterations the fit converged.
+final sum of squares of residuals : 5.51469e-09
+rel. change during last iteration : -2.99992e-16
+
+degrees of freedom    (FIT_NDF)                        : 8
+rms of residuals      (FIT_STDFIT) = sqrt(WSSR/ndf)    : 2.62552e-05
+variance of residuals (reduced chisquare) = WSSR/ndf   : 6.89336e-10
+
+Final set of parameters            Asymptotic Standard Error
+=======================            ==========================
+a               = -1.01204e-05     +/- 1.194e-05    (118%)
+b               = 0.000268893      +/- 7.349e-05    (27.33%)
+
+correlation matrix of the fit parameters:
+                a      b      
+a               1.000 
+b              -0.994  1.000 
+
+
+*******************************************************************************
+Sat May 28 11:47:25 2022
+
+
+FIT:    data read from "Ternaria.dat" using 1:2
+        format = x:z
+        #datapoints = 10
+        residuals are weighted equally (unit weight)
+
+function used for fitting: LogN(x)
+	LogN(x)=a*log(x)+b
+fitted parameters initialized with current variable values
+
+iter      chisq       delta/lim  lambda   a             b            
+   0 5.1112166193e+02   0.00e+00  4.41e+00    1.000000e+00   1.000000e+00
+   6 1.0393615558e-08  -1.59e-11  4.41e-06   -7.137848e-06   2.796523e-04
+
+After 6 iterations the fit converged.
+final sum of squares of residuals : 1.03936e-08
+rel. change during last iteration : -1.59171e-16
+
+degrees of freedom    (FIT_NDF)                        : 8
+rms of residuals      (FIT_STDFIT) = sqrt(WSSR/ndf)    : 3.60444e-05
+variance of residuals (reduced chisquare) = WSSR/ndf   : 1.2992e-09
+
+Final set of parameters            Asymptotic Standard Error
+=======================            ==========================
+a               = -7.13785e-06     +/- 1.639e-05    (229.6%)
+b               = 0.000279652      +/- 0.0001009    (36.08%)
+
+correlation matrix of the fit parameters:
+                a      b      
+a               1.000 
+b              -0.994  1.000 
+
+
+*******************************************************************************
+Sat May 28 11:47:35 2022
+
+
+FIT:    data read from "Ternaria.dat" using 1:2
+        format = x:z
+        #datapoints = 10
+        residuals are weighted equally (unit weight)
+
+function used for fitting: LogN(x)
+	LogN(x)=a*log(x)+b
+fitted parameters initialized with current variable values
+
+iter      chisq       delta/lim  lambda   a             b            
+   0 5.1112596150e+02   0.00e+00  4.41e+00    1.000000e+00   1.000000e+00
+   6 1.4329482972e-08  -1.15e-11  4.41e-06   -1.027462e-05   2.688356e-04
+
+After 6 iterations the fit converged.
+final sum of squares of residuals : 1.43295e-08
+rel. change during last iteration : -1.15452e-16
+
+degrees of freedom    (FIT_NDF)                        : 8
+rms of residuals      (FIT_STDFIT) = sqrt(WSSR/ndf)    : 4.23224e-05
+variance of residuals (reduced chisquare) = WSSR/ndf   : 1.79119e-09
+
+Final set of parameters            Asymptotic Standard Error
+=======================            ==========================
+a               = -1.02746e-05     +/- 1.925e-05    (187.3%)
+b               = 0.000268836      +/- 0.0001185    (44.06%)
+
+correlation matrix of the fit parameters:
+                a      b      
+a               1.000 
+b              -0.994  1.000 
+
+
+*******************************************************************************
+Sat May 28 11:47:41 2022
+
+
+FIT:    data read from "Ternaria.dat" using 1:2
+        format = x:z
+        #datapoints = 10
+        residuals are weighted equally (unit weight)
+
+function used for fitting: LogN(x)
+	LogN(x)=a*log(x)+b
+fitted parameters initialized with current variable values
+
+iter      chisq       delta/lim  lambda   a             b            
+   0 5.1112438934e+02   0.00e+00  4.41e+00    1.000000e+00   1.000000e+00
+   6 1.5766715202e-08   0.00e+00  4.41e-06   -9.574190e-06   2.755520e-04
+
+After 6 iterations the fit converged.
+final sum of squares of residuals : 1.57667e-08
+rel. change during last iteration : 0
+
+degrees of freedom    (FIT_NDF)                        : 8
+rms of residuals      (FIT_STDFIT) = sqrt(WSSR/ndf)    : 4.43941e-05
+variance of residuals (reduced chisquare) = WSSR/ndf   : 1.97084e-09
+
+Final set of parameters            Asymptotic Standard Error
+=======================            ==========================
+a               = -9.57419e-06     +/- 2.019e-05    (210.9%)
+b               = 0.000275552      +/- 0.0001243    (45.09%)
+
+correlation matrix of the fit parameters:
+                a      b      
+a               1.000 
+b              -0.994  1.000 
+
+
+*******************************************************************************
+Sat May 28 11:47:50 2022
+
+
+FIT:    data read from "Ternaria.dat" using 1:2
+        format = x:z
+        #datapoints = 10
+        residuals are weighted equally (unit weight)
+
+function used for fitting: LogN(x)
+	LogN(x)=a*log(x)+b
+fitted parameters initialized with current variable values
+
+iter      chisq       delta/lim  lambda   a             b            
+   0 5.1112858160e+02   0.00e+00  4.41e+00    1.000000e+00   1.000000e+00
+   6 5.1092813901e-09  -1.62e-11  4.41e-05    2.781238e-05   1.491029e-05
+
+After 6 iterations the fit converged.
+final sum of squares of residuals : 5.10928e-09
+rel. change during last iteration : -1.61898e-16
+
+degrees of freedom    (FIT_NDF)                        : 8
+rms of residuals      (FIT_STDFIT) = sqrt(WSSR/ndf)    : 2.52717e-05
+variance of residuals (reduced chisquare) = WSSR/ndf   : 6.3866e-10
+
+Final set of parameters            Asymptotic Standard Error
+=======================            ==========================
+a               = 2.78124e-05      +/- 1.149e-05    (41.32%)
+b               = 1.49103e-05      +/- 7.073e-05    (474.4%)
+
+correlation matrix of the fit parameters:
+                a      b      
+a               1.000 
+b              -0.994  1.000 

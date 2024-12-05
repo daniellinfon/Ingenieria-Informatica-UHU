@@ -1,0 +1,12 @@
+#ESTE ES UN SCRIPT DE CASO MEDIO
+set title "Interpolacion"
+set key top left vertical inside 
+set xlabel " Talla(n)"
+set ylabel " Tiempo (ms)"
+LogLogN(x)=a*log(log(x))+b 
+fit LogLogN(x)"Interpolacion.dat" using 1:2 via a,b 
+plot "Interpolacion.dat" using 1 : 2 title "Interpolacion", LogLogN(x)
+set terminal pdf
+set output "Interpolacion.pdf"
+replot
+pause - 1

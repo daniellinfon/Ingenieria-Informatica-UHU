@@ -1,0 +1,19 @@
+﻿  ConjuntoInt.cpp
+  Graficas.cpp
+C:\Users\danie\Desktop\Ing. Informatica\FAA\Practica3_FAA\Graficas.cpp(119,36): warning C4018: '<': no coinciden signed/unsigned
+  Principal.cpp
+C:\Users\danie\Desktop\Ing. Informatica\FAA\Practica3_FAA\Principal.cpp(53,10): warning C4129: 'E': secuencia de escape de carácter no reconocida
+  TestBusqueda.cpp
+C:\Users\danie\Desktop\Ing. Informatica\FAA\Practica3_FAA\TestBusqueda.cpp(53,30): warning C4018: '<': no coinciden signed/unsigned
+C:\Users\danie\Desktop\Ing. Informatica\FAA\Practica3_FAA\TestBusqueda.cpp(204,36): warning C4018: '<': no coinciden signed/unsigned
+C:\Users\danie\Desktop\Ing. Informatica\FAA\Practica3_FAA\TestBusqueda.cpp(216,37): warning C4018: '<': no coinciden signed/unsigned
+C:\Users\danie\Desktop\Ing. Informatica\FAA\Practica3_FAA\TestBusqueda.cpp(238,37): warning C4018: '<': no coinciden signed/unsigned
+C:\Users\danie\Desktop\Ing. Informatica\FAA\Practica3_FAA\TestBusqueda.cpp(242,37): warning C4018: '<': no coinciden signed/unsigned
+  TestOrdenacion.cpp
+C:\Users\danie\Desktop\Ing. Informatica\FAA\Practica3_FAA\TestOrdenacion.cpp(65,30): warning C4018: '<': no coinciden signed/unsigned
+C:\Users\danie\Desktop\Ing. Informatica\FAA\Practica3_FAA\TestOrdenacion.cpp(208,36): warning C4018: '<': no coinciden signed/unsigned
+C:\Users\danie\Desktop\Ing. Informatica\FAA\Practica3_FAA\TestOrdenacion.cpp(220,37): warning C4018: '<': no coinciden signed/unsigned
+C:\Users\danie\Desktop\Ing. Informatica\FAA\Practica3_FAA\TestOrdenacion.cpp(236,37): warning C4018: '<': no coinciden signed/unsigned
+C:\Users\danie\Desktop\Ing. Informatica\FAA\Practica3_FAA\TestOrdenacion.cpp(240,37): warning C4018: '<': no coinciden signed/unsigned
+  Generando código...
+  Practica3_FAA.vcxproj -> C:\Users\danie\Desktop\Ing. Informatica\FAA\Practica3_FAA\Debug\Practica3_FAA.exe

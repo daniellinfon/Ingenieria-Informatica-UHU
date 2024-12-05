@@ -1,0 +1,20 @@
+﻿  AlgoritmosOrdenacion.cpp
+  ConjuntoInt_emp.cpp
+  ConjuntoInt_teor.cpp
+  Graficas.cpp
+C:\Users\danie\Desktop\Ing. Informatica\FAA\Practicas\teorico\Graficas.cpp(86,36): warning C4018: '<': no coinciden signed/unsigned
+  Mtime.cpp
+  Principal.cpp
+  TestAlgoritmo.cpp
+C:\Users\danie\Desktop\Ing. Informatica\FAA\Practicas\teorico\TestAlgoritmo.cpp(158,28): warning C4244: '=': conversión de 'double' a 'int'; posible pérdida de datos
+C:\Users\danie\Desktop\Ing. Informatica\FAA\Practicas\teorico\TestAlgoritmo.cpp(160,28): warning C4244: '=': conversión de 'double' a 'int'; posible pérdida de datos
+C:\Users\danie\Desktop\Ing. Informatica\FAA\Practicas\teorico\TestAlgoritmo.cpp(227,8): warning C4101: 'posicion': variable local sin referencia
+C:\Users\danie\Desktop\Ing. Informatica\FAA\Practicas\teorico\TestAlgoritmo.cpp(247,8): warning C4101: 'posicion': variable local sin referencia
+  TestOrdenacion.cpp
+C:\Users\danie\Desktop\Ing. Informatica\FAA\Practicas\teorico\TestOrdenacion.cpp(67,30): warning C4018: '<': no coinciden signed/unsigned
+C:\Users\danie\Desktop\Ing. Informatica\FAA\Practicas\teorico\TestOrdenacion.cpp(274,36): warning C4018: '<': no coinciden signed/unsigned
+C:\Users\danie\Desktop\Ing. Informatica\FAA\Practicas\teorico\TestOrdenacion.cpp(286,37): warning C4018: '<': no coinciden signed/unsigned
+C:\Users\danie\Desktop\Ing. Informatica\FAA\Practicas\teorico\TestOrdenacion.cpp(302,37): warning C4018: '<': no coinciden signed/unsigned
+C:\Users\danie\Desktop\Ing. Informatica\FAA\Practicas\teorico\TestOrdenacion.cpp(306,37): warning C4018: '<': no coinciden signed/unsigned
+  Generando código...
+  teorico.vcxproj -> C:\Users\danie\Desktop\Ing. Informatica\FAA\Practicas\teorico\Debug\teorico.exe
