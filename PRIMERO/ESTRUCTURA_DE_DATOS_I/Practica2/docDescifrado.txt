@@ -1,0 +1,3 @@
+En un sistema que garantice la confidencialidad, un tercero no es capaz de extraer contenido inteligible.
+Para garantizarla se utilizan mecanismos de cifrado y de ocultación.
+Es complicado conseguir un mecanismo de seguridad absolutamente seguro.

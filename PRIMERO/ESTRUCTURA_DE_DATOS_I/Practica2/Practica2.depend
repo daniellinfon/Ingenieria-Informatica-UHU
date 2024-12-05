@@ -1,0 +1,66 @@
+# depslib dependency file v1.0
+1652354129 source:c:\users\usuario\desktop\practica2\main.cpp
+	<iostream>
+	<Pila.h>
+
+1651143732 source:c:\users\usuario\desktop\practica2\src\lista.cpp
+	"Lista.h"
+
+1652348941 c:\users\usuario\desktop\practica2\include\lista.h
+	<iostream>
+	<string>
+	<cstring>
+
+1652352316 source:c:\users\danie\desktop\ing. informatica\estructura de datos i\practica2\src\criptodoc.cpp
+	"CriptoDoc.h"
+
+1651494436 c:\users\danie\desktop\ing. informatica\estructura de datos i\practica2\include\criptodoc.h
+	"Lista.h"
+	<fstream>
+
+1652348942 c:\users\danie\desktop\ing. informatica\estructura de datos i\practica2\include\lista.h
+	<iostream>
+	<string>
+	<cstring>
+
+1651143732 source:c:\users\danie\desktop\ing. informatica\estructura de datos i\practica2\src\lista.cpp
+	"Lista.h"
+
+1653227112 source:c:\users\danie\desktop\ing. informatica\estructura de datos i\practica2\main.cpp
+	<iostream>
+	<Pila.h>
+
+1651143732 source:h:\examen_ed\practica2\src\lista.cpp
+	"Lista.h"
+
+1651143642 h:\examen_ed\practica2\include\lista.h
+	<iostream>
+	<string>
+
+1651748754 source:h:\examen_ed\practica2\main.cpp
+	<iostream>
+	<CriptoDoc.h>
+
+1651494436 h:\examen_ed\practica2\include\criptodoc.h
+	"Lista.h"
+	<fstream>
+
+1651749832 source:h:\examen_ed\practica2\src\criptodoc.cpp
+	"CriptoDoc.h"
+
+1652352315 source:c:\users\usuario\desktop\practica2\src\criptodoc.cpp
+	"CriptoDoc.h"
+
+1651494436 c:\users\usuario\desktop\practica2\include\criptodoc.h
+	"Lista.h"
+	<fstream>
+
+1652354678 c:\users\usuario\desktop\practica2\include\pila.h
+	<CriptoDoc.h>
+
+1652354706 source:c:\users\danie\desktop\ing. informatica\estructura de datos i\practica2\src\pila.cpp
+	"Pila.h"
+
+1652354680 c:\users\danie\desktop\ing. informatica\estructura de datos i\practica2\include\pila.h
+	<CriptoDoc.h>
+

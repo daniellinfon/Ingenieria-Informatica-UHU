@@ -1,0 +1,144 @@
+# depslib dependency file v1.0
+1649330799 source:c:\users\usuario\desktop\practica_1\main.cpp
+	<iostream>
+	<Clasificacion.h>
+	<ctime>
+
+1648467596 source:e:\practica_1\main.cpp
+	<iostream>
+	<Clasificacion.h>
+
+1647518962 source:e:\practica_1\src\clasificacion.cpp
+	"Clasificacion.h"
+	<iostream>
+	<fstream>
+
+1648069560 e:\practica_1\include\clasificacion.h
+	<Prueba.h>
+
+1648468154 source:e:\practica_1\src\prueba.cpp
+	<Prueba.h>
+	<Clasificacion.h>
+	<iostream>
+	<fstream>
+
+1648452372 e:\practica_1\include\prueba.h
+	<fstream>
+	<string.h>
+	<cstdlib>
+
+1648724032 source:h:\practica_1\main.cpp
+	<iostream>
+	<Clasificacion.h>
+	<ctime>
+
+1648724270 h:\practica_1\include\clasificacion.h
+	<Prueba.h>
+
+1648724270 h:\practica_1\include\prueba.h
+	<fstream>
+	<string.h>
+	<cstdlib>
+
+1647518962 source:h:\practica_1\src\clasificacion.cpp
+	"Clasificacion.h"
+	<iostream>
+	<fstream>
+
+1648722532 source:h:\practica_1\src\prueba.cpp
+	<Prueba.h>
+	<Clasificacion.h>
+	<iostream>
+	<fstream>
+
+1649681037 source:c:\users\alber\desktop\practica_1\main.cpp
+	<iostream>
+	<Clasificacion.h>
+	<ctime>
+
+1649069624 c:\users\alber\desktop\practica_1\include\clasificacion.h
+	<Prueba.h>
+
+1649330786 c:\users\alber\desktop\practica_1\include\prueba.h
+	<fstream>
+	<string.h>
+	<cstdlib>
+
+1649330656 source:c:\users\alber\desktop\practica_1\src\clasificacion.cpp
+	"Clasificacion.h"
+	<iostream>
+	<fstream>
+
+1649420030 source:c:\users\alber\desktop\practica_1\src\prueba.cpp
+	<Prueba.h>
+	<Clasificacion.h>
+	<iostream>
+	<fstream>
+
+1649330654 source:c:\users\usuario\desktop\practica_1\src\clasificacion.cpp
+	"Clasificacion.h"
+	<iostream>
+	<fstream>
+
+1649069624 c:\users\usuario\desktop\practica_1\include\clasificacion.h
+	<Prueba.h>
+
+1649330784 c:\users\usuario\desktop\practica_1\include\prueba.h
+	<fstream>
+	<string.h>
+	<cstdlib>
+
+1649331023 source:c:\users\usuario\desktop\practica_1\src\prueba.cpp
+	<Prueba.h>
+	<Clasificacion.h>
+	<iostream>
+	<fstream>
+
+1650415366 source:c:\users\danie\desktop\ing. informatica\estructura de datos i\practica_1\main.cpp
+	<iostream>
+	<Clasificacion.h>
+	<ctime>
+
+1649069624 c:\users\danie\desktop\ing. informatica\estructura de datos i\practica_1\include\clasificacion.h
+	<Prueba.h>
+
+1649330786 c:\users\danie\desktop\ing. informatica\estructura de datos i\practica_1\include\prueba.h
+	<fstream>
+	<string.h>
+	<cstdlib>
+
+1649330656 source:c:\users\danie\desktop\ing. informatica\estructura de datos i\practica_1\src\clasificacion.cpp
+	"Clasificacion.h"
+	<iostream>
+	<fstream>
+
+1650416111 source:c:\users\danie\desktop\ing. informatica\estructura de datos i\practica_1\src\prueba.cpp
+	<Prueba.h>
+	<Clasificacion.h>
+	<iostream>
+	<fstream>
+
+1650484163 source:c:\users\danie\desktop\ing. informatica\estructura de datos i\practica_1_exl6\main.cpp
+	<iostream>
+	<Clasificacion.h>
+	<ctime>
+
+1649069624 c:\users\danie\desktop\ing. informatica\estructura de datos i\practica_1_exl6\include\clasificacion.h
+	<Prueba.h>
+
+1650481900 c:\users\danie\desktop\ing. informatica\estructura de datos i\practica_1_exl6\include\prueba.h
+	<fstream>
+	<string.h>
+	<cstdlib>
+
+1650481900 source:c:\users\danie\desktop\ing. informatica\estructura de datos i\practica_1_exl6\src\clasificacion.cpp
+	"Clasificacion.h"
+	<iostream>
+	<fstream>
+
+1650484482 source:c:\users\danie\desktop\ing. informatica\estructura de datos i\practica_1_exl6\src\prueba.cpp
+	<Prueba.h>
+	<Clasificacion.h>
+	<iostream>
+	<fstream>
+
