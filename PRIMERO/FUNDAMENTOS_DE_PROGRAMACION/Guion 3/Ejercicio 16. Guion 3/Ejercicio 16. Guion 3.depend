@@ -1,0 +1,6 @@
+# depslib dependency file v1.0
+1637879932 source:c:\users\danie\desktop\programaci”n\fundamentos de programaci”n\ejercicios\guion 3\ejercicio 16. guion 3\main.cpp
+	<iostream>
+	<cstdlib>
+	<ctime>
+

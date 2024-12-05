@@ -1,0 +1,7 @@
+# depslib dependency file v1.0
+1641422486 source:c:\users\danie\desktop\programaci”n\fundamentos de programaci”n\ejercicios\guion 4\ejercicio2.g4.palabraoculta\main.cpp
+	<iostream>
+	<conio.h>
+	<cstring>
+	<cctype>
+
