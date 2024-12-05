@@ -1,0 +1,117 @@
+PRACTICA 1 DANIEL LINFON YE LIU
+
+1) Usando rutas relativas y con una sola orden cree la siguiente estructura de directorios:
+
+mkdir -p PE1/Guiones PE1/ficheros/letras PE1/ficheros/numeros
+
+2) Muévase al directorio Guiones usado una ruta absoluta.
+
+cd /home/daniellinfon.ye/PE1/Guiones
+
+3) Usando rutas absolutas, copie todos los ficheros del directorio /home/so/ficheros cuyo
+nombre comience por una vocal minúscula al directorio ficheros.
+
+cp /home/so/ficheros/[aeiou]* /home/daniellinfon.ye/PE1/ficheros
+
+4) Usando rutas relativas, mueva los ficheros del directorio ficheros, cuyo nombre contenga
+algún numero al directorio numeros.
+
+mv ../ficheros/*[0-9]* ../ficheros/numeros
+
+5) Usando rutas relativas, borre todos los ficheros del directorio ficheros que contengan 7 o más
+caracteres en su nombre.(aparecerá un aviso indicando que no se borra el directorio numeros)*
+
+rm ../ficheros/'???????*'
+ 
+6) Usando una ruta absoluta, visualice, de forma que se pare cada vez que se llene la pantalla, el
+contenido del fichero a_cancion2, del directorio numeros.
+
+more /home/daniellinfon.ye/PE1/ficheros/numeros/a_cancion2
+
+7) Modifique los permisos de todos los ficheros del directorio numeros usando el formato
+octal, para que los permisos sean: rwxr-----, usando una ruta relativa.
+
+chmod 740 ../ficheros/numeros/*
+
+8) Usando una ruta relativa, añada permiso de escritura para los miembros del grupo al
+directorio Guiones.
+
+chmod g+w ./
+
+9) Muévase a su directorio de usuario de la forma mas corta posible.
+
+cd ~
+
+10) Cree un enlace duro en el directorio Guiones que apunte al fichero ejecutable5 del
+directorio numeros. El enlace tendrá el mismo nombre.
+
+ln PE1/ficheros/numeros/ejecutable5 PE1/Guiones/ejecutable5
+
+11) Usando la orden find, haga que aparezca por pantalla el siguiente mensaje, para todos los
+ficheros regulares que cuelguen a partir de su directorio de usuario, que tengan más de un enlace
+duro y en el que el grupo no tenga permiso de ejecución. ”El fichero XXXX ocupa XXX bytes”
+
+find -type f -links +1 ! -perm g=x -printf "El fichero %f ocupa %s bytes\n"
+
+12) Modifique el fichero necesario para que después de loguearse en el sistema:
+joe .profile
+a. Exista una ruta al directorio Guiones en la variable PATH.
+
+añadir
+PATH=$PATH:/home/daniellinfon.ye/PE1/Guiones
+
+b. Se cree una variable llamada FICHEROS con la ruta absoluta al directorio
+ficheros.
+
+añadir
+export FICHEROS="/home/daniellinfon.ye/PE1/ficheros"
+
+c. Cree un alias llamado hora que indique la hora y los minutos separados por un
+punto.
+
+alias hora='echo "$(date +%H).$(date +%M)'
+
+K^
+x
+
+
+13) Haga que tomen efecto las modificaciones realizadas.
+
+K^
+x
+. .profile
+
+14) Haga que al iniciar un shell interactivo esté disponible un alias llamad arbold que liste los
+directorios que cuelgan del directorio en el que estemos situados.
+
+joe .profile
+alias arbold='ls ./'
+K^
+x
+. .profile
+
+15) Busque todos los ficheros regulares que cuelguen a partir del directorio /etc, cuyo nombre
+finalice en .conf, a los que se ha accedido por última vez hace menos de 100 días y que tengan
+un tamaño menor a 2 Kilobytes. Los errores deberán guardarse en un fichero llamado errores
+dentro del directorio letras y la salida en un fichero llamado busqueda dentro del directorio
+Guiones. Use las variables posibles.
+
+find /etc -type f -name '*.conf' -atime -100 -size -2k > /home/daniellinfon.ye/PE1/Guiones/busqueda 2> $FICHEROS/letras/errores
+
+16) Visualice, haciendo que se muestre pantalla a pantalla, el contenido de todos los ficheros
+regulares que cuelguen a partir del directorio /home/so/ficheros, cuyo nombre no
+comience por punto, cuyo estado (permisos, propietario, etc …) haya sido modificado hace menos
+de 20 días. Los errores no deben aparecer por pantalla.
+
+find /home/so/ficheros -type f -not -name '.*' -mtime -20 | more
+
+17) Haga que se muestre en pantalla el número (sólo el número) de procesos que hay en el sistema,
+cuya orden de ejecución esté localizada en el directorio /usr/bin/.
+
+ps aux | grep -c '/usr/bin/'
+
+18) Con una sola orden, visualice las dos primeras lineas de cada uno de los ficheros que cuelguen a
+partir del directorio de usuario y cuyo nombre comience por punto, haciendo que la visualización
+se detenga cada vez que la pantalla se llene.
+
+head -n 2 $(find ~ -type f -name '.*') | more

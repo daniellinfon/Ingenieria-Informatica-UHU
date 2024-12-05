@@ -1,0 +1,220 @@
+/*1) Diseñar la función facturacion(), la cual admite dos parámetros de entrada (un
+teléfono y un año) y devuelve la facturación total de ese número en ese año. La
+función debe controlar 2 tipos de excepciones:
+ el teléfono no existe o el teléfono no ha realizado llamadas ese año.
+ la facturación del teléfono es inferior a 1 euro.*/
+
+CREATE or REPLACE 
+FUNCTION facturacion( p_tf_origen mf.llamada.tf_origen%type, p_año integer) 
+RETURN FLOAT IS
+/* Declaraciones locales*/
+Importe_Total NUMBER(10, 2);
+facturacionBaja EXCEPTION;
+BEGIN
+/* Bloque de Sentencias */ 
+SELECT TRUNC(SUM((LLAM.duracion*TAR.coste)/60),2) INTO Importe_Total
+FROM ( MF.Telefono TEL INNER JOIN MF.Tarifa TAR USING(tarifa, compañia))
+INNER JOIN MF.Llamada LLAM ON LLAM.tf_origen=TEL.numero
+WHERE EXTRACT (YEAR FROM LLAM.fecha_hora) = p_año
+AND LLAM.tf_origen= p_tf_origen
+GROUP BY LLAM.tf_origen;
+IF(Importe_Total<1)THEN
+RAISE facturacionBaja;
+END IF;
+RETURN Importe_Total;
+/* Tratamiento de Excepciones*/
+EXCEPTION
+WHEN facturacionBaja THEN
+dbms_output.put_line('Facturaciondemasiado baja!! :O');
+RETURN -1;
+WHEN NO_DATA_FOUND then
+dbms_output.put_line('El teléfono no existe o no ha realizado llamadas ese año');
+RETURN -1;
+WHEN others then
+dbms_output.put_line('Ha ocurrido un error!! :(');
+RETURN -1;
+END facturacion;
+
+call dbms_output.put_line(facturacion('654123321', 2006));
+
+/*2) Diseñar el procedimiento LlamadaFacturacion(año), el cual, para cada teléfono de
+la tabla LLAMADAS debe realizar una llamada a la función facturación y mostrar la
+facturación de dicho teléfono en el año que se le pasa como parámetro.*/
+
+CREATE OR REPLACE PROCEDURE LlamadaFacturacion(p_año INTEGER) IS
+/* Declaraciones locales*/
+CURSOR c_telefonos IS 
+SELECT DISTINCT tf_origen 
+FROM MF.LLAMADA 
+WHERE EXTRACT (YEAR FROM fecha_hora) = p_año;
+/* Bloque de Sentencias */ 
+BEGIN
+dbms_output.put_line('Nºteléfono' || '  ' || 'Importe(en€)');
+dbms_output.put_line('---------------------------------');
+FOR r_telefono IN c_telefonos LOOP
+    dbms_output.put_line(r_telefono.tf_origen|| '  ' || facturacion(r_telefono.tf_origen, p_año));
+END LOOP;
+/* Tratamiento de Excepciones*/
+EXCEPTION
+WHEN others THEN
+dbms_output.put_line('Ha ocurrido un error!!:(');
+END;
+
+SET SERVEROUTPUT ON
+execute LlamadaFacturacion(2006);
+
+/*Ejercicio 3. Crear un procedimiento que tenga como parámetros de
+entrada el nombre de una compañía y una fecha. Dicho procedimiento
+debe realizar las siguientes operaciones:
+1. Comprobar que existen en la BD llamadas realizadas en la fecha
+que se pasa como parámetro. En caso contrario lanzar una
+Eexcepción y mostrar el mensaje “No hay llamadas de teléfonos de
+la compañía <compañía> en la fecha <fecha> en la BD”.
+2. Para cada teléfono de la compañía que pasa por parámetro, el
+procedimiento debe mostrar la siguiente información: número de
+teléfono, número total de llamadas realizadas en la fecha indicada,
+número de llamadas de duración mayor de 100 segundos
+realizadas en la fecha, porcentaje que suponen estas últimas
+respecto al total de las realizadas.
+3. Un resumen del número de llamadas realizadas por todos los
+teléfonos de la compañía indicada en la fecha pasada por
+parámetro.*/
+
+CREATE OR REPLACE
+PROCEDURE llamadas_cia( cia COMPAÑIA.nombre%type,fecha DATE ) IS
+/* Declaraciones locales*/
+num_LL_Total INTEGER;
+num_LL_100 INTEGER;
+num_Total_Cia INTEGER;
+porcentaje NUMBER(5,2);
+filas_llamadas_fecha INTEGER;
+no_existe_llamadas_fecha EXCEPTION;
+CURSOR c_telefonos_cia IS 
+SELECT numero 
+FROM COMPAÑIA C INNER JOIN TELEFONO TEL
+ON C.cif=TEL.compañia
+WHERE C.nombre= cia;
+CURSOR c_llamadas_tf(tlf LLAMADA.tf_origen%type)IS
+SELECT tf_origen,tf_destino,duracion
+FROM LLAMADA LLAM
+WHERE TO_CHAR(fecha_hora,'dd/mm/yy')=fecha AND tf_origen=tlf;
+BEGIN
+/* Bloque de Sentencias */
+SELECT COUNT(*) INTO filas_llamadas_fecha
+FROM (LLAMADA LLAM INNER JOIN TELEFONO TEL
+ON LLAM.tf_origen=TEL.numero) 
+INNER JOIN COMPAÑIA CIA ON CIA.cif=TEL.compañia
+WHERE TO_CHAR(LLAM.fecha_hora,'dd/mm/yy') = fecha
+AND CIA.nombre=cia; 
+IF filas_llamadas_fecha= 0 THEN 
+RAISE no_existe_llamadas_fecha; 
+END IF;
+dbms_output.put_line('Tlf. Origen NUM_LL NUM_LL_100 PORCENT%');
+dbms_output.put_line('------------------------------------------------------');
+num_Total_Cia:=0;
+FOR v_telefono IN c_telefonos_cia LOOP
+num_LL_Total:=0; num_LL_100 :=0; 
+    FOR v_llamada IN c_llamadas_tf(v_telefono.numero)LOOP
+    IF(v_llamada.duracion> 100)THEN
+        num_LL_100 := num_LL_100 +1;
+    END IF;
+    num_LL_Total :=num_LL_Total+1;
+    num_Total_Cia:=num_Total_Cia +1;
+    END LOOP; 
+IF (num_LL_100 <> 0) THEN
+porcentaje:=(num_LL_100 / num_LL_Total)*100;
+ELSE porcentaje:=0;
+END IF;
+dbms_output.put_line( rpad(v_telefono.numero,13) || rpad(num_LL_Total,8) || 
+rpad(num_LL_100,13) || rpad(porcentaje|| '%',7) );
+END LOOP;
+dbms_output.put_line('Numero Total de LLamadas:' || num_Total_Cia );
+/* Bloque de Tratamiento de Excepciones */
+EXCEPTION
+WHEN no_existe_llamadas_fecha THEN
+dbms_output.put_line('No hay llamadas del ' || fecha|| ' en la BD!!:O');
+WHEN others THEN
+dbms_output.put_line('Ha ocurrido un error!!:(');
+END llamadas_cia;
+
+SET SERVEROUTPUT ON
+execute llamadas_cia('Kietostar','16/10/06');
+
+--Examen Lunes
+
+create or replace PROCEDURE PROCESAMIENTO(p_provincia mf.cliente.provincia%type,p_fechaini VARCHAR,p_fechafin VARCHAR) IS
+
+fechainexistente exception; --Excepcion
+
+CURSOR c_telefono IS
+SELECT tf.numero --Selecciono los telefonos los cuales pertenecen a la provincia que pasamos por parametro.
+FROM mf.cliente cli inner join mf.telefono tf on cli.dni=tf.cliente
+WHERE cli.provincia=p_provincia;
+
+CURSOR c_llamada (p_numero mf.telefono.numero%type) IS --Selecciono las llamadas de origen y destino las cuales están comprendidas entre las fechas pasadas como parametro(de la funcion)
+SELECT ll.tf_origen, ll.tf_destino, c.provincia                       --y el numero que pasamos por parametro en el cursor(del primer cursor)
+FROM (mf.llamada ll inner join mf.telefono tel on tel.numero=ll.tf_destino) inner join mf.cliente c on c.dni = tel.cliente 
+WHERE (to_date(to_char(ll.fecha_hora, 'dd/mm/yyyy'),'dd/mm/yyyy')) BETWEEN to_date(p_fechaini,'dd/mm/yyyy') AND to_date(p_fechafin,'dd/mm/yyyy') AND ll.tf_origen=p_numero;
+
+llamadast integer;
+llamadastotales integer;
+llamadaslocales integer; --Variables
+porcentaje number(10, 2);
+contador integer; --llamadas totales de todos los telefonos
+llamadasnolocales integer;
+
+BEGIN
+SELECT COUNT(*) INTO llamadast --Hacemos una consulta para saber si existen llamadas que esten entre las fechas pasadas por parametro
+FROM mf.llamada llam
+WHERE (to_date(to_char(llam.fecha_hora, 'dd/mm/yyyy'),'dd/mm/yyyy')) BETWEEN to_date(p_fechaini,'dd/mm/yyyy') AND to_date(p_fechafin,'dd/mm/yyyy');
+
+IF (llamadast = 0) THEN 
+RAISE fechainexistente; --Condicion para lanzar la excepcion en caso de que no existan llamadas en esas fechas
+END IF;
+
+ contador := 0;
+ dbms_output.put_line('INFORME DE LLAMADAS DE TELEFONOS PERTENECIENTES A LA PROVINCIA DE  '|| p_provincia || ' ENTRE ' || p_fechaini || ' Y ' || p_fechafin );
+ dbms_output.put_line('Teléfono     #Total     #Local     #NoLocal     %Locales');
+ dbms_output.put_line('--------     ------     ------     --------     ---------');                 
+FOR v_telefono IN c_telefono LOOP
+ llamadastotales := 0;
+ llamadaslocales := 0;
+ llamadasnolocales := 0;
+ porcentaje := 0;
+ FOR v_llamada IN c_llamada(v_telefono.numero) LOOP
+   llamadastotales := llamadastotales +1;
+    IF (v_llamada.provincia = p_provincia) then
+    llamadaslocales := llamadaslocales+1;
+    END IF;
+ END LOOP;
+ IF llamadastotales <> 0 THEN
+ porcentaje := (llamadaslocales/llamadastotales)*100;
+ ELSE
+ porcentaje :=0;
+ END IF;
+ llamadasnolocales := llamadastotales-llamadaslocales;
+ dbms_output.put_line(v_telefono.numero || '        ' || llamadastotales || '           ' || llamadaslocales || '            ' || llamadasnolocales || '         ' || porcentaje || '%');
+ contador :=contador+llamadastotales;
+ END LOOP;
+
+dbms_output.put_line('-----------------------------------------'); 
+dbms_output.put_line('NUMERO TOTAL DE LLAMADAS: ' || contador);
+
+
+
+
+EXCEPTION
+
+when fechainexistente then
+
+dbms_output.put_line('No existen registradas en la BD llamadas realizadas entre la fecha ' || p_fechaini || ' Y ' || p_fechafin);
+
+when others then
+
+dbms_output.put_line('Ha ocurrido una situación inesperada durante la ejecucion del procedimiento!!,procede a morder una farola de metal.');
+
+
+
+
+END procesamiento;
+

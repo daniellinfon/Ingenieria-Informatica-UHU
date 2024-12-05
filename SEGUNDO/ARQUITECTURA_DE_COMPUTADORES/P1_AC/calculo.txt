@@ -1,0 +1,24 @@
+Calculo mips
+
+En una pantalla:
+181 CADENAS COMPLETAS Y 1 INCOMPLETA (9 caracteres) + un cambio de pantalla:
+
+1 PANTALLA = 181*96 + 9*8 + 18*2 + 6 = 17.490 instrucciones
+
+Inicio = 9 instrucciones
+
+Cadena regular = 8*10 + 1*16 = 96 instrucciones
+Cadena 10 = 8*10 + 1*18 = 98 instrucciones 
+Por cada cadena 10 sumamos dos instrucciones
+Cada pantalla +6 instrucciones (en este caso, dos veces)
+
+-----------------------------------------------------------
+Ha recorrido 2 veces la pantalla = 2*6 = 12 instrucciones
++ 96 cadenas completas + 1 incompleta (8)
+
+TOTAL = 9(inicio) + 2*17.490 + 96*96 + 8*8 + 9*2 + 5 (RS) = 44292
+		 96 cadenas rojos + incompleta 8 char
+TIEMPO DE EJECUCION DE UNA INTERRUPCIONES 1/18,2 s= 55ms
+MIPS = 44292 / (55*10^-3) = 0,8 MIPS
+
+

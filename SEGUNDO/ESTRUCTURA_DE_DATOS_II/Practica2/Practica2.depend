@@ -1,0 +1,35 @@
+# depslib dependency file v1.0
+1683561585 source:c:\users\danie\desktop\ing. informatica\segundo\estructura de datos ii\practicas\practica2\main.cpp
+	<iostream>
+	<cstdlib>
+	<math.h>
+	<queue>
+	"arbin.h"
+	"abb.h"
+	"Excep_Ej6.h"
+
+1675934360 c:\users\danie\desktop\ing. informatica\segundo\estructura de datos ii\practicas\practica2\arbin.h
+	"nodoB.h"
+	"excep_arbin.h"
+
+1611771492 c:\users\danie\desktop\ing. informatica\segundo\estructura de datos ii\practicas\practica2\nodob.h
+	<stdlib.h>
+
+1611771492 c:\users\danie\desktop\ing. informatica\segundo\estructura de datos ii\practicas\practica2\excep_arbin.h
+	"excepcion.h"
+
+1611771492 c:\users\danie\desktop\ing. informatica\segundo\estructura de datos ii\practicas\practica2\excepcion.h
+	<string>
+	<stdexcept>
+
+1675934006 c:\users\danie\desktop\ing. informatica\segundo\estructura de datos ii\practicas\practica2\abb.h
+	"nodoB.h"
+	"excep_abb.h"
+	"arbin.h"
+
+1611771492 c:\users\danie\desktop\ing. informatica\segundo\estructura de datos ii\practicas\practica2\excep_abb.h
+	"excepcion.h"
+
+1618477562 c:\users\danie\desktop\ing. informatica\segundo\estructura de datos ii\practicas\practica2\excep_ej6.h
+	"excepcion.h"
+

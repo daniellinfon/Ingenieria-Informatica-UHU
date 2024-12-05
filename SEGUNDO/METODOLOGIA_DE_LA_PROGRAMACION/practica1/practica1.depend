@@ -1,0 +1,375 @@
+# depslib dependency file v1.0
+1514140574 source:c:\users\amarquez\downloads\practica1a\main.cpp
+	<iostream>
+
+1542139450 source:c:\users\amarquez\downloads\practica1a\src\cliente.cpp
+	<cstdlib>
+	<cstring>
+	<iomanip>
+	<sstream>
+	"Cliente.h"
+
+1542139384 c:\users\amarquez\downloads\practica1a\include\cliente.h
+	<iostream>
+	"Fecha.h"
+
+1542139819 c:\users\amarquez\downloads\practica1a\include\fecha.h
+	<iostream>
+
+1542115996 source:c:\users\amarquez\downloads\practica1a\src\fecha.cpp
+	"Fecha.h"
+
+1514140574 source:c:\users\usuario\downloads\practica1a_ayuda_2020\main.cpp
+	<iostream>
+
+1542141806 source:c:\users\usuario\downloads\practica1a_ayuda_2020\src\cliente.cpp
+	<cstdlib>
+	<cstring>
+	<iomanip>
+	<sstream>
+	"Cliente.h"
+
+1604494689 c:\users\usuario\downloads\practica1a_ayuda_2020\include\cliente.h
+	<iostream>
+	"Fecha.h"
+
+1605086653 c:\users\usuario\downloads\practica1a_ayuda_2020\include\fecha.h
+	<iostream>
+
+1605086673 source:c:\users\usuario\downloads\practica1a_ayuda_2020\src\fecha.cpp
+	"Fecha.h"
+
+1514140574 source:c:\users\amarquez\downloads\practica1a_ayuda_2020\main.cpp
+	<iostream>
+
+1542141806 source:c:\users\amarquez\downloads\practica1a_ayuda_2020\src\cliente.cpp
+	<cstdlib>
+	<cstring>
+	<iomanip>
+	<sstream>
+	"Cliente.h"
+
+1604494689 c:\users\amarquez\downloads\practica1a_ayuda_2020\include\cliente.h
+	<iostream>
+	"Fecha.h"
+
+1605086653 c:\users\amarquez\downloads\practica1a_ayuda_2020\include\fecha.h
+	<iostream>
+
+1605099347 source:c:\users\amarquez\downloads\practica1a_ayuda_2020\src\fecha.cpp
+	"Fecha.h"
+
+1666769370 source:c:\users\danie\desktop\ing. informatica\segundo\metodologia de la programacion\practica1\src\cliente.cpp
+	<cstdlib>
+	<cstring>
+	<iomanip>
+	<sstream>
+	"Cliente.h"
+
+1666345430 c:\users\danie\desktop\ing. informatica\segundo\metodologia de la programacion\practica1\include\cliente.h
+	<iostream>
+	"Fecha.h"
+
+1666996466 c:\users\danie\desktop\ing. informatica\segundo\metodologia de la programacion\practica1\include\fecha.h
+	<iostream>
+
+1669159445 source:c:\users\danie\desktop\ing. informatica\segundo\metodologia de la programacion\practica1\main.cpp
+	<cstdlib>
+	<iostream>
+	<iomanip>
+	"Fecha.h"
+	"Contrato.h"
+	"ContratoTP.h"
+	"ContratoMovil.h"
+	"Empresa.h"
+
+1666772436 source:c:\users\danie\desktop\ing. informatica\segundo\metodologia de la programacion\practica1\src\fecha.cpp
+	"Fecha.h"
+
+1669196214 source:c:\users\usuario\desktop\practica1\main.cpp
+	<cstdlib>
+	<iostream>
+	<iomanip>
+	"Fecha.h"
+	"Contrato.h"
+	"ContratoTP.h"
+	"ContratoMovil.h"
+	"Empresa.h"
+
+1666996466 c:\users\usuario\desktop\practica1\include\fecha.h
+	<iostream>
+
+1666345430 c:\users\usuario\desktop\practica1\include\cliente.h
+	<iostream>
+	"Fecha.h"
+
+1666772436 source:c:\users\usuario\desktop\practica1\src\fecha.cpp
+	"Fecha.h"
+
+1666769370 source:c:\users\usuario\desktop\practica1\src\cliente.cpp
+	<cstdlib>
+	<cstring>
+	<iomanip>
+	<sstream>
+	"Cliente.h"
+
+1667380922 source:c:\users\danie\desktop\ing. informatica\segundo\metodologia de la programacion\practica1\src\contrato.cpp
+	"Contrato.h"
+
+1667383780 c:\users\danie\desktop\ing. informatica\segundo\metodologia de la programacion\practica1\include\contrato.h
+	<iostream>
+	"Fecha.h"
+
+1667950688 source:c:\users\danie\desktop\ing. informatica\segundo\metodologia de la programacion\practica1\src\contratomovil.cpp
+	<iostream>
+	<cstdlib>
+	<cstring>
+	<iomanip>
+	"Contrato.h"
+	"ContratoMovil.h"
+
+1667383780 c:\users\danie\desktop\ing. informatica\segundo\metodologia de la programacion\practica1\include\contratomovil.h
+	<iostream>
+	"Fecha.h"
+	"Contrato.h"
+
+1667950688 source:c:\users\danie\desktop\ing. informatica\segundo\metodologia de la programacion\practica1\src\contratotp.cpp
+	"ContratoTP.h"
+
+1667383780 c:\users\danie\desktop\ing. informatica\segundo\metodologia de la programacion\practica1\include\contratotp.h
+	<iostream>
+	"Fecha.h"
+	"Contrato.h"
+
+1667988060 source:h:\practica1\main.cpp
+	<cstdlib>
+	<iostream>
+	<iomanip>
+	"Fecha.h"
+	"Contrato.h"
+	"ContratoTP.h"
+	"ContratoMovil.h"
+	"Empresa.h"
+
+1666996466 h:\practica1\include\fecha.h
+	<iostream>
+
+1667383780 h:\practica1\include\contrato.h
+	<iostream>
+	"Fecha.h"
+
+1667383780 h:\practica1\include\contratotp.h
+	<iostream>
+	"Fecha.h"
+	"Contrato.h"
+
+1667383780 h:\practica1\include\contratomovil.h
+	<iostream>
+	"Fecha.h"
+	"Contrato.h"
+
+1666769370 source:h:\practica1\src\cliente.cpp
+	<cstdlib>
+	<cstring>
+	<iomanip>
+	<sstream>
+	"Cliente.h"
+
+1666345430 h:\practica1\include\cliente.h
+	<iostream>
+	"Fecha.h"
+
+1667950688 source:h:\practica1\src\contratomovil.cpp
+	<iostream>
+	<cstdlib>
+	<cstring>
+	<iomanip>
+	"Contrato.h"
+	"ContratoMovil.h"
+
+1666772436 source:h:\practica1\src\fecha.cpp
+	"Fecha.h"
+
+1667950688 source:h:\practica1\src\contratotp.cpp
+	"ContratoTP.h"
+
+1667380922 source:h:\practica1\src\contrato.cpp
+	"Contrato.h"
+
+1667615696 h:\practica1\include\empresa.h
+	"Fecha.h"
+	"Cliente.h"
+	"Contrato.h"
+	"ContratoTP.h"
+	"ContratoMovil.h"
+
+1667988854 source:h:\practica1\src\empresa.cpp
+	"Empresa.h"
+	<cstring>
+
+1669159412 source:c:\users\danie\desktop\ing. informatica\segundo\metodologia de la programacion\practica1\src\empresa.cpp
+	"Empresa.h"
+	<typeinfo>
+	<cstring>
+
+1669159347 c:\users\danie\desktop\ing. informatica\segundo\metodologia de la programacion\practica1\include\empresa.h
+	"Fecha.h"
+	"Cliente.h"
+	"Contrato.h"
+	"ContratoTP.h"
+	"ContratoMovil.h"
+
+1667988060 source:e:\practica1\main.cpp
+	<cstdlib>
+	<iostream>
+	<iomanip>
+	"Fecha.h"
+	"Contrato.h"
+	"ContratoTP.h"
+	"ContratoMovil.h"
+	"Empresa.h"
+
+1666996466 e:\practica1\include\fecha.h
+	<iostream>
+
+1667383780 e:\practica1\include\contrato.h
+	<iostream>
+	"Fecha.h"
+
+1667383780 e:\practica1\include\contratotp.h
+	<iostream>
+	"Fecha.h"
+	"Contrato.h"
+
+1667383780 e:\practica1\include\contratomovil.h
+	<iostream>
+	"Fecha.h"
+	"Contrato.h"
+
+1667999130 e:\practica1\include\empresa.h
+	"Fecha.h"
+	"Cliente.h"
+	"Contrato.h"
+	"ContratoTP.h"
+	"ContratoMovil.h"
+
+1666345430 e:\practica1\include\cliente.h
+	<iostream>
+	"Fecha.h"
+
+1666769370 source:e:\practica1\src\cliente.cpp
+	<cstdlib>
+	<cstring>
+	<iomanip>
+	<sstream>
+	"Cliente.h"
+
+1667380922 source:e:\practica1\src\contrato.cpp
+	"Contrato.h"
+
+1667950688 source:e:\practica1\src\contratomovil.cpp
+	<iostream>
+	<cstdlib>
+	<cstring>
+	<iomanip>
+	"Contrato.h"
+	"ContratoMovil.h"
+
+1667950688 source:e:\practica1\src\contratotp.cpp
+	"ContratoTP.h"
+
+1666772436 source:e:\practica1\src\fecha.cpp
+	"Fecha.h"
+
+1667999130 source:e:\practica1\src\empresa.cpp
+	"Empresa.h"
+	<typeinfo>
+	<cstring>
+
+1667380922 source:c:\users\usuario\desktop\practica1\src\contrato.cpp
+	"Contrato.h"
+
+1669194940 c:\users\usuario\desktop\practica1\include\contrato.h
+	<iostream>
+	"Fecha.h"
+
+1667950688 source:c:\users\usuario\desktop\practica1\src\contratomovil.cpp
+	<iostream>
+	<cstdlib>
+	<cstring>
+	<iomanip>
+	"Contrato.h"
+	"ContratoMovil.h"
+
+1667383780 c:\users\usuario\desktop\practica1\include\contratomovil.h
+	<iostream>
+	"Fecha.h"
+	"Contrato.h"
+
+1669195667 c:\users\usuario\desktop\practica1\include\contratotp.h
+	<iostream>
+	"Fecha.h"
+	"Contrato.h"
+
+1669198112 c:\users\usuario\desktop\practica1\include\empresa.h
+	"Fecha.h"
+	"Cliente.h"
+	"Contrato.h"
+	"ContratoTP.h"
+	"ContratoMovil.h"
+
+1669196116 source:c:\users\usuario\desktop\practica1\src\contratotp.cpp
+	"ContratoTP.h"
+	<cstring>
+
+1669198086 source:c:\users\usuario\desktop\practica1\src\empresa.cpp
+	"Empresa.h"
+	<typeinfo>
+	<cstring>
+
+1666769370 source:c:\users\danie\desktop\ing. informatica\segundo\practica1\src\cliente.cpp
+	<cstdlib>
+	<cstring>
+	<iomanip>
+	<sstream>
+	"Cliente.h"
+
+1666345430 c:\users\danie\desktop\ing. informatica\segundo\practica1\include\cliente.h
+	<iostream>
+	"Fecha.h"
+
+1666996466 c:\users\danie\desktop\ing. informatica\segundo\practica1\include\fecha.h
+	<iostream>
+
+1667380922 source:c:\users\danie\desktop\ing. informatica\segundo\practica1\src\contrato.cpp
+	"Contrato.h"
+
+1669194940 c:\users\danie\desktop\ing. informatica\segundo\practica1\include\contrato.h
+	<iostream>
+	"Fecha.h"
+
+1667950688 source:c:\users\danie\desktop\ing. informatica\segundo\practica1\src\contratomovil.cpp
+	<iostream>
+	<cstdlib>
+	<cstring>
+	<iomanip>
+	"Contrato.h"
+	"ContratoMovil.h"
+
+1667383780 c:\users\danie\desktop\ing. informatica\segundo\practica1\include\contratomovil.h
+	<iostream>
+	"Fecha.h"
+	"Contrato.h"
+
+1669196116 source:c:\users\danie\desktop\ing. informatica\segundo\practica1\src\contratotp.cpp
+	"ContratoTP.h"
+	<cstring>
+
+1669195667 c:\users\danie\desktop\ing. informatica\segundo\practica1\include\contratotp.h
+	<iostream>
+	"Fecha.h"
+	"Contrato.h"
+
+1666772436 source:c:\users\danie\desktop\ing. informatica\segundo\practica1\src\fecha.cpp
+	"Fecha.h"
+
