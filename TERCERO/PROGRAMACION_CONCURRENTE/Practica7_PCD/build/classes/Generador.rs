@@ -1,0 +1,2 @@
+practica7_pcd.Generador
+practica7_pcd.Generador$1

@@ -1,0 +1,2 @@
+practica10_pcd.CanvasComedero
+practica10_pcd.animal

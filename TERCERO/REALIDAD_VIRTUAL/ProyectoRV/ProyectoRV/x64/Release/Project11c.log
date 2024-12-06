@@ -1,0 +1,51 @@
+﻿C:\Program Files (x86)\Microsoft Visual Studio\2019\Enterprise\MSBuild\Microsoft\VC\v160\Microsoft.CppBuild.targets(513,5): warning MSB8028: El directorio intermedio (x64\Release\) contiene archivos compartidos de otro proyecto (Project11c.vcxproj). Esto puede dar lugar a un comportamiento incorrecto de limpieza y recompilación.
+  CGApplication.cpp
+  CGCamera.cpp
+  CGCube.cpp
+C:\ComputerGraphics\Projects\ProyectoRV\ProyectoRV\CGCube.cpp(118,23): warning C4018: '<': no coinciden signed/unsigned
+C:\ComputerGraphics\Projects\ProyectoRV\ProyectoRV\CGCube.cpp(121,23): warning C4018: '<': no coinciden signed/unsigned
+C:\ComputerGraphics\Projects\ProyectoRV\ProyectoRV\CGCube.cpp(124,23): warning C4018: '<': no coinciden signed/unsigned
+C:\ComputerGraphics\Projects\ProyectoRV\ProyectoRV\CGCube.cpp(127,23): warning C4018: '<': no coinciden signed/unsigned
+  CGFigure.cpp
+C:\ComputerGraphics\Projects\ProyectoRV\ProyectoRV\CGFigure.cpp(239,20): warning C4244: '=': conversión de 'double' a 'GLfloat'; posible pérdida de datos
+  CGGround.cpp
+C:\ComputerGraphics\Projects\ProyectoRV\ProyectoRV\CGGround.cpp(42,23): warning C4018: '<': no coinciden signed/unsigned
+C:\ComputerGraphics\Projects\ProyectoRV\ProyectoRV\CGGround.cpp(45,23): warning C4018: '<': no coinciden signed/unsigned
+C:\ComputerGraphics\Projects\ProyectoRV\ProyectoRV\CGGround.cpp(48,23): warning C4018: '<': no coinciden signed/unsigned
+C:\ComputerGraphics\Projects\ProyectoRV\ProyectoRV\CGGround.cpp(51,23): warning C4018: '<': no coinciden signed/unsigned
+  CGLight.cpp
+  CGMaterial.cpp
+  CGModel.cpp
+C:\ComputerGraphics\Projects\ProyectoRV\ProyectoRV\CGModel.cpp(161,46): warning C4305: 'argumento': truncamiento de 'double' a 'GLfloat'
+C:\ComputerGraphics\Projects\ProyectoRV\ProyectoRV\CGModel.cpp(288,17): warning C4244: 'inicializando': conversión de 'genType' a 'float'; posible pérdida de datos
+          with
+          [
+              genType=double
+          ]
+C:\ComputerGraphics\Projects\ProyectoRV\ProyectoRV\CGModel.cpp(361,40): warning C4244: 'argumento': conversión de 'double' a 'GLfloat'; posible pérdida de datos
+C:\ComputerGraphics\Projects\ProyectoRV\ProyectoRV\CGModel.cpp(412,23): warning C4244: 'inicializando': conversión de 'double' a 'float'; posible pérdida de datos
+  CGObject.cpp
+  CGPiece.cpp
+  CGPorteria.cpp
+C:\ComputerGraphics\Projects\ProyectoRV\ProyectoRV\CGPorteria.cpp(99,23): warning C4018: '<': no coinciden signed/unsigned
+C:\ComputerGraphics\Projects\ProyectoRV\ProyectoRV\CGPorteria.cpp(104,23): warning C4018: '<': no coinciden signed/unsigned
+C:\ComputerGraphics\Projects\ProyectoRV\ProyectoRV\CGPorteria.cpp(109,23): warning C4018: '<': no coinciden signed/unsigned
+C:\ComputerGraphics\Projects\ProyectoRV\ProyectoRV\CGPorteria.cpp(113,23): warning C4018: '<': no coinciden signed/unsigned
+  CGScene.cpp
+  CGShaderProgram.cpp
+C:\ComputerGraphics\Projects\ProyectoRV\ProyectoRV\CGShaderProgram.cpp(187,50): warning C4267: 'inicializando': conversión de 'size_t' a 'int'; posible pérdida de datos
+  CGSkybox.cpp
+  CGSlotCar.cpp
+C:\ComputerGraphics\Projects\ProyectoRV\ProyectoRV\CGSlotCar.cpp(31,17): warning C4154: eliminación de una expresión de matriz; suministrada una conversión a puntero
+C:\ComputerGraphics\Projects\ProyectoRV\ProyectoRV\CGSlotCar.cpp(33,14): warning C4154: eliminación de una expresión de matriz; suministrada una conversión a puntero
+  CGSlotCar_pieces.cpp
+  CGSphere.cpp
+C:\ComputerGraphics\Projects\ProyectoRV\ProyectoRV\CGSphere.cpp(29,45): warning C4244: '=': conversión de 'double' a 'GLfloat'; posible pérdida de datos
+C:\ComputerGraphics\Projects\ProyectoRV\ProyectoRV\CGSphere.cpp(52,47): warning C4244: '=': conversión de 'double' a 'GLfloat'; posible pérdida de datos
+C:\ComputerGraphics\Projects\ProyectoRV\ProyectoRV\CGSphere.cpp(68,45): warning C4244: '=': conversión de 'double' a 'GLfloat'; posible pérdida de datos
+  main.cpp
+  Generando código
+  Previous IPDB not found, fall back to full compilation.
+  All 197 functions were compiled because no usable IPDB/IOBJ from previous compilation was found.
+  Generación de código finalizada
+  Project11c.vcxproj -> C:\ComputerGraphics\Projects\ProyectoRV\x64\Release\ProyectoRV.exe

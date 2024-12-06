@@ -1,0 +1,21 @@
+# Esto serían comentarios
+
+# Definiciones de los estados (lista de Proposiciones)
+Ei: despierto, en_casa
+Ef: en_oficina, tiene_cafe, tiene_documentos
+
+# Acciones: (Nombre, Prerequisitos, Adicion, Eliminacion)
+Accion: despertar          ; dormido            ; despierto            ; dormido
+Accion: salir_de_casa      ; despierto, en_casa ; fuera_de_casa        ; en_casa
+Accion: entrar_en_oficina  ; fuera_de_casa      ; en_oficina           ; fuera_de_casa
+Accion: comprar_cafe       ; fuera_de_casa      ; tiene_cafe           ;
+Accion: olvidar_cafe       ; tiene_cafe         ;                     ; tiene_cafe
+Accion: tomar_documentos   ; en_oficina         ; tiene_documentos     ; 
+Accion: olvidar_documentos ; tiene_documentos   ;                     ; tiene_documentos
+Accion: regresar_a_casa    ; fuera_de_casa      ; en_casa              ; fuera_de_casa
+Accion: dormir             ; en_casa            ; dormido              ; despierto, en_casa
+Accion: despertar_en_casa  ; dormido, en_casa   ; despierto            ; dormido
+Accion: salir_en_medio     ; en_oficina         ; fuera_de_casa        ; en_oficina
+Accion: entrar_en_medio    ; fuera_de_casa      ; en_oficina           ; fuera_de_casa
+
+
