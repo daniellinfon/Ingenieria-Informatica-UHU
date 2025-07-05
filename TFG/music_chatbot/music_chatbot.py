@@ -28,7 +28,7 @@ class MusicRecommenderAgent(Agent):
         super().__init__(id)
         self.num_user_msg = 0
 
-        # Cargar el modelo y el tokenizador desde el directorio guardado
+        # Load the model and tokenizer from the saved directory
         bert_model_path = "models/finetuned_bert-base-uncased"
         self.bert_model = AutoModelForSequenceClassification.from_pretrained(bert_model_path)
         self.bert_tokenizer = AutoTokenizer.from_pretrained(bert_model_path)
@@ -42,10 +42,10 @@ class MusicRecommenderAgent(Agent):
         self.t5_tokenizer = T5TokenizerFast.from_pretrained(t5_model_path)
 
         
-        # Configura tus credenciales (sustituye por las tuyas)
+        # Set your credentials (replace with yours)
         self.sp = spotipy.Spotify(auth_manager=SpotifyClientCredentials(
-            client_id="4814f01af6c749d19583b43bedebbf0f",
-            client_secret="8ef9f6e98adc4c1ead2de06326597da6"
+            client_id=None,
+            client_secret=None 
         ))
         
         # Connect to the database
@@ -111,12 +111,12 @@ class MusicRecommenderAgent(Agent):
         if self.waiting_for_song_selection:
             if message.isdigit():
                 selected_index = int(message) - 1
-                if selected_index == 0:  # El usuario selecciona "0" para no añadir ninguna canción
+                if selected_index == 0:  # The user selects "0" to not add any songs
                     response = "No song was selected. Cancelling the operation."
                 elif 0 <= selected_index < len(self.possible_songs):
                     selected_song = self.possible_songs[selected_index]
             
-                    # Añadir la canción seleccionada a la lista de reproducción
+                    # Add the selected song to the playlist
                     response = self.add_to_playlist(
                                 selected_song['title'],
                                 selected_song['artist'],
@@ -136,7 +136,7 @@ class MusicRecommenderAgent(Agent):
                 response = "Invalid input. Please enter a valid number."   
         
         else:
-            # Detectar intención usando el modelo
+            # Detect intent using the model
             intent = self.predict_intent(message) 
             if intent == "add":
                 title, artist = self.extract_song_info(message, intent)
@@ -148,19 +148,16 @@ class MusicRecommenderAgent(Agent):
 
                 if song_info:
                     if isinstance(song_info, list) and len(song_info) > 1:
-                        # Si song_info tiene 10 canciones, devolver una lista con las canciones
                         response = "Found the following songs:\n"
                         for idx, song in enumerate(song_info, 1):
                             response += f"{idx}. {song['title']} by {song['artist']} (Album: {song['album']})\n"
                             
-                        # Agregar una instrucción para que el usuario seleccione una canción
                         response += "\nPlease select the song number you want to add to your playlist (or enter 0 if you don't want to add any song)"
                         self.waiting_for_song_selection = True
-                        # Rellenar self.possible_songs con las canciones encontradas
+                       
                         for idx, song in enumerate(song_info, 1):
-                            self.possible_songs.append(song)  # Añadir la canción a la lista
+                            self.possible_songs.append(song) 
                     else:
-                        # Si song_info tiene solo una canción, añadirla a la lista de reproducción
                         response = self.add_to_playlist(
                             song_info['title'],
                             song_info['artist'],
@@ -232,7 +229,7 @@ class MusicRecommenderAgent(Agent):
         result = self.cursor.fetchone()  # Obtiene la primera fila que coincide
 
         return result
-       
+    
     def search_song_in_db(self, title: str, artist: str = None):
         """Search for the most popular song in the database by title and artist.
         
@@ -244,39 +241,39 @@ class MusicRecommenderAgent(Agent):
         dict: The most popular song's details
         """
         
-        # Construir el query de búsqueda
+        # Build the search query
         query = title
         if artist:
             query += f" {artist}"
         
         print('query:', query)
-        # Realizar la búsqueda en Spotify
+        # Perform the search on Spotify
         results = self.sp.search(q=query, limit=10, type='track')
 
-        # Extraer los resultados de la búsqueda
+        # Extract the search results
         tracks = results['tracks']['items']
         
         if not tracks:
-            return None  # Si no se encuentran canciones, devolver None
+            return None  # Return None if no songs are found
 
         if artist:
-            # Si también se proporciona el artista, devolver solo la canción más popular
+            # If artist is also provided, return only the most popular song
             most_popular_track = max(tracks, key=lambda track: track['popularity'])
 
             song_info = {
-                'id': None,  # Este campo es para autoincremento (lo maneja la base de datos)
+                'id': None,  # This field is for autoincrement (handled by the database)
                 'spotify_id': most_popular_track['id'],
                 'title': most_popular_track['name'],
                 'artist': ', '.join(artist['name'] for artist in most_popular_track['artists']),
                 'album': most_popular_track['album']['name'],
-                'genre': most_popular_track['album'].get('genres', 'unknown'),  # Puede no estar disponible
+                'genre': most_popular_track['album'].get('genres', 'unknown'),  # May not be available
                 'release_date': most_popular_track['album']['release_date'],
             }
             
             return song_info
 
         else:
-            # Si solo se proporciona el título, devolver las 10 canciones más populares
+            # If only the title is provided, return the top 10 most popular songs
             songs_info = []
             for track in tracks:
                 song_info = {
@@ -290,10 +287,9 @@ class MusicRecommenderAgent(Agent):
                 }
                 songs_info.append(song_info)
 
-            # Ordenar las canciones por popularidad en orden descendente
+            # Sort the songs by popularity in descending order
             songs_info.sort(key=lambda song: song['popularity'], reverse=True)
             return songs_info
-        
 
     
 #-------------------------------------ADD - REMOVE - VIEW - CLEAR--------------------------------------------------
@@ -314,20 +310,20 @@ class MusicRecommenderAgent(Agent):
         str: A confirmation message.
         """
         try:
-            # Comprobar si la canción ya está en la base de datos
+            # Check if the song is already in the database
             self.cursor.execute("SELECT spotify_id FROM user_songs WHERE spotify_id = ?", (spotify_id,))
             existing_song = self.cursor.fetchone()
 
             if existing_song:
                 return f"The song '{title}' by '{artist}' is already in your song library."
             
-            # Añadir la canción a la tabla user_songs
+            # Add the song to the user_songs table
             self.cursor.execute('''
                 INSERT INTO user_songs (spotify_id, title, artist, album, genre, release_date)
                 VALUES (?, ?, ?, ?, ?, ?)
             ''', (spotify_id, title, artist, album, genre, release_date))
 
-            # Guardar los cambios en la base de datos
+            # Commit changes to the database
             self.connection.commit()
 
             response = f'Song "{title.title()}" by "{artist.title()}" added to your song library.'
@@ -338,28 +334,28 @@ class MusicRecommenderAgent(Agent):
             return response
         
         except sqlite3.Error as e:
-            return f"Error al añadir la canción a la base de datos: {e}"
+            return f"Error while adding the song to the database: {e}"
+
         
     def view_playlist(self):
-        """Returns the contents of the user_songs table."""    
+        """Returns the contents of the user_songs table."""
         try:
-            
-            # Consultar todas las canciones en la tabla user_songs
+            # Query all songs from the user_songs table
             self.cursor.execute("SELECT * FROM user_songs")
             
-            # Recuperar todos los resultados
+            # Fetch all results
             songs = self.cursor.fetchall()
             
-            # Comprobar si hay canciones
+            # Check if there are any songs
             if not songs:
                 return "The playlist is empty."
 
-            # Mostrar los resultados
+            # Format and return the list of songs
             return "\n".join([f"{song[2]} by {song[3]} (Album: {song[4]})" for song in songs])
 
-      
         except sqlite3.Error as e:
-            print(f"Error al acceder a la base de datos: {e}")
+            print(f"Error accessing the database: {e}")
+
 
     def remove_song_from_playlist(self, title: str, artist: str = None):
         """
@@ -373,7 +369,7 @@ class MusicRecommenderAgent(Agent):
         str: A confirmation message or an error message.
         """
         try:
-            # Construir la consulta SQL dependiendo de si se pasa el artista
+            # Build the SQL query depending on whether the artist is passed
             if artist:
                 self.cursor.execute('''
                     DELETE FROM user_songs WHERE title = ? AND artist = ?
@@ -383,18 +379,19 @@ class MusicRecommenderAgent(Agent):
                     DELETE FROM user_songs WHERE title = ?
                 ''', (title,))
 
-            # Comprobar si alguna fila fue eliminada
+            # Check if any row was deleted
             if self.cursor.rowcount > 0:
-                self.connection.commit()  # Guardar los cambios en la base de datos
+                self.connection.commit()  
                 return f"The song '{title}' has been removed from your library."
             else:
                 return f"TThe song '{title}' was not found in your library"
         except sqlite3.Error as e:
-            return f"Error al eliminar la canción de la base de datos: {e}"
+            return f"Error deleting song from database: {e}"
         
         
     def clear_playlist(self) -> str:
         """Empty the playlist_songs table by removing all songs."""
+        
         self.cursor.execute("DELETE FROM user_songs")
         self.connection.commit()
         return "Cleared all songs from the playlist."
@@ -417,7 +414,7 @@ class MusicRecommenderAgent(Agent):
             artist_name = track['artists'][0]['name']
             artist = self.sp.artist(artist_id)
 
-            genre = artist['genres'][0] if artist['genres'] else "pop"  # Si no tiene género, usamos "pop" como predeterminado
+            genre = artist['genres'][0] if artist['genres'] else "pop"  # If there is no gender, we use "pop" as default
 
             # Same genre
             query_genre = f"genre:{genre}"
@@ -460,12 +457,21 @@ class MusicRecommenderAgent(Agent):
             return recommended_songs
         
         except spotipy.exceptions.SpotifyException as e:
-            print(f"Error de Spotify: {e}")
+            print(f"Error of Spotify: {e}")
             return []
         
 #-------------------------------------------------------------------------------------------------------------------------------------------------
 
     def predict_intent(self, message):
+        """
+        Uses majority voting among BERT, RoBERTa, and T5 models to predict the intent of a message.
+
+        Args:
+        message (str): The user input message.
+
+        Returns:
+        str: The predicted intent (e.g., 'add', 'remove', 'view', 'clear'), or 'unknown' if no majority.
+        """
         bert = self.predict_bert_intent(message)
         roberta = self.predict_roberta_intent(message)
         t5 = self.predict_t5_intent(message)
@@ -476,83 +482,82 @@ class MusicRecommenderAgent(Agent):
             return intent_counts.most_common(1)[0][0]
         else:
             return "unknown"
-    
-    def predict_bert_intent(self, message):
 
-        # Tokenizar las frases de prueba
+    def predict_bert_intent(self, message):
+        """
+        Predicts the intent of a message using a fine-tuned BERT model.
+
+        Args:
+        message (str): The user input message.
+
+        Returns:
+        str: One of the predefined intent labels.
+        """
+        # Tokenize the input
         inputs = self.bert_tokenizer(message, padding=True, truncation=True, return_tensors="pt")
 
-        # Pasar las frases al modelo para obtener predicciones
-        self.bert_model.eval()  # Poner el modelo en modo evaluación
+        # Set the model to evaluation mode and perform prediction
+        self.bert_model.eval()
         with torch.no_grad():
             outputs = self.bert_model(**inputs)
 
-        # Convertir los logits a predicciones
-        prediccion = torch.argmax(outputs.logits, dim=1).numpy()
+        # Convert logits to predicted label
+        prediction = torch.argmax(outputs.logits, dim=1).numpy()
 
-        # Mapear los índices a las etiquetas
-        etiquetas = ["add", "clear", "remove", "view"]
+        # Map label index to class name
+        labels = ["add", "clear", "remove", "view"]
         
-        return etiquetas[prediccion[0]]
-    
-    def predict_roberta_intent(self, message):
+        return labels[prediction[0]]
 
-        # Tokenizar las frases de prueba
+    def predict_roberta_intent(self, message):
+        """
+        Predicts the intent of a message using a fine-tuned RoBERTa model.
+
+        Args:
+        message (str): The user input message.
+
+        Returns:
+        str: One of the predefined intent labels.
+        """
+        # Tokenize the input
         inputs = self.roberta_tokenizer(message, padding=True, truncation=True, return_tensors="pt")
 
-        # Pasar las frases al modelo para obtener predicciones
-        self.roberta_model.eval()  # Poner el modelo en modo evaluación
+        # Set the model to evaluation mode and perform prediction
+        self.roberta_model.eval()
         with torch.no_grad():
             outputs = self.roberta_model(**inputs)
 
-        # Convertir los logits a predicciones
-        prediccion = torch.argmax(outputs.logits, dim=1).numpy()
+        # Convert logits to predicted label
+        prediction = torch.argmax(outputs.logits, dim=1).numpy()
 
-        # Mapear los índices a las etiquetas
-        etiquetas = ["add", "clear", "remove", "view"]
+        # Map label index to class name
+        labels = ["add", "clear", "remove", "view"]
         
-        return etiquetas[prediccion[0]]
-    
+        return labels[prediction[0]]
+
     def predict_t5_intent(self, message):
+        """
+        Predicts the intent of a message using a fine-tuned T5 model (text-to-text format).
 
-        # Preprocesar la entrada
-        input_ids = self.t5_tokenizer("Clasifica: " + message, return_tensors="pt").input_ids
-        attention_mask = self.t5_tokenizer("Clasifica: " + message, return_tensors="pt").attention_mask
+        Args:
+        message (str): The user input message.
 
-        # Generar la predicción
+        Returns:
+        str: The intent label as a decoded string.
+        """
+        # Preprocess the input prompt
+        input_ids = self.t5_tokenizer("Classify: " + message, return_tensors="pt").input_ids
+        attention_mask = self.t5_tokenizer("Classify: " + message, return_tensors="pt").attention_mask
+
+        # Generate prediction
         self.t5_model.eval()
         with torch.no_grad():
             generated_ids = self.t5_model.generate(input_ids=input_ids, attention_mask=attention_mask, max_length=10)
 
-        # Decodificar la predicción
+        # Decode the output
         decoded_pred = self.t5_tokenizer.decode(generated_ids[0], skip_special_tokens=True)
         
         return decoded_pred
-    
-    def suggest_unused_feature(self, used_features: dict):
-        """
-        This function suggests unused features to the user based on their interaction with the system.
-        
-        Args:
-        used_features (dict): A dictionary that keeps track of the features the user has already used.
-
-        Returns:
-        str: A suggestion for an unused feature or None if all features have been used.
-        """
-        suggestions = []
-        if not used_features.get("song_added", False):
-            suggestions.append("You can add songs to your playlist by typing 'add <song>' or 'add <artist>: <song>' or 'add <song> by <artist>'.")
-        if not used_features.get("playlist_viewed", False):
-            suggestions.append("Want to see your playlist? Just use 'view playlist'.")
-        if not used_features.get("song_removed", False):
-            suggestions.append("If you'd like to remove a song from your playlist, you can use 'remove <song>' or 'remove <artist>: <song>' or 'remove <song> by <artist>'.")
-        if not used_features.get("playlist_cleared", False):
-            suggestions.append("Need to start fresh? You can clear the playlist with 'clear playlist'.")
-        
-        # Introduce only one feature at a time to avoid overwhelming the user
-        if suggestions:
-            return suggestions[0]
-        return None
 
     def normalize_input(self, text):
         """Normalize the input by converting it to lowercase and removing punctuation."""
@@ -572,13 +577,14 @@ class MusicRecommenderAgent(Agent):
                 return title, artist
 
             match_title_only = re.search(r"(?:add|ad|addd|adddd|remove|include|inclde|includ|delete|dlte|delet|erase|eras|deletee|take)\s+(.+?)(?:\s+to|\s+from|\s+on|\s+in|\s+my|\s+mi|\s+playlist|\s+playlis|\s+list|\s+.|$)", text, re.IGNORECASE)
+            
             if match_title_only:
                 title = match_title_only.group(1).strip()
-                artist = None  # Artista no proporcionado
+                artist = None
                 return title, artist
 
         return None, None
 
-# Inicia la plataforma Flask con tu nuevo agente
+# Start the Flask platform with your new agent
 platform = FlaskSocketPlatform(MusicRecommenderAgent)
 platform.start()
