@@ -77,7 +77,7 @@ Contiene la implementación funcional del chatbot conversacional
 
 ![App Screenshot](./docs/results/chatbot_add1.png)
 
-### 🔹 Comando "add" con título y artista
+### 🔹 Comando "add" indicando únicamente el título
 
 ![App Screenshot](./docs/results/chatbot_add2.png)
 
