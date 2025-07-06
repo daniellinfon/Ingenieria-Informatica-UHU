@@ -28,7 +28,7 @@ Planificador de tareas basado en el formalismo STRIPS. Resuelve problemas de pla
 ### 🤖 [Visual Object Tracking – Sistemas de Percepción](./03_THIRD_YEAR/SISTEMAS_DE_PERCEPCION/PFinal)
 Proyecto de seguimiento de objetos en vídeo basado en color y detección del objeto mayor. Incluye calibración, extracción de características y segmentación de color.
 
-### 🔀 [Rocket League Training Game](./04_FOURTH_YEAR/VIDEOJUEGOS/OpenGL_RocketLeague)
+### ⚽🚗 [Rocket League Training Game](./03_THIRD_YEAR//REALIDAD_VIRTUAL)
 Minijuego 3D desarrollado en OpenGL que simula un entrenamiento de Rocket League. Incluye físicas realistas y gráficos tridimensionales.
 
 ---
@@ -73,7 +73,7 @@ Task planner based on the STRIPS formalism. Solves sequential planning problems.
 ### 🤖 [Visual Object Tracking – Perception Systems](./03_THIRD_YEAR/SISTEMAS_DE_PERCEPCION/PFinal)
 Video object tracking project based on color segmentation and largest-object detection. Includes calibration, feature extraction, and color-based segmentation.
 
-### 🔀 [Rocket League Training Game](./04_FOURTH_YEAR/VIDEOJUEGOS/OpenGL_RocketLeague)
+### ⚽🚗 [Rocket League Training Game](./03_THIRD_YEAR//REALIDAD_VIRTUAL)
 3D minigame developed with OpenGL simulating a Rocket League training mode. Includes realistic physics and 3D graphics.
 
 ---
