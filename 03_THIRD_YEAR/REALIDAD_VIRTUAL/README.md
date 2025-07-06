@@ -7,3 +7,5 @@ The game has been developed using the **OpenGL** library, which enables 3D graph
 The file [MemoriaRV.pdf](./MemoriaRV.pdf) provides a detailed technical explanation of the project, including the structure of the 3D scene, object design, and testing methodology used to validate the game’s functionality.
 
 👉 **To play the game, simply run the executable file [`ProyectoRV.exe`](./ProyectoRV/x64/Release) included in the project directory.**
+
+![rocket](https://github.com/user-attachments/assets/3f568148-5e21-48d9-a0dd-53dbc6b75666)
