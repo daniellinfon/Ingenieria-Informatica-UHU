@@ -14,3 +14,4 @@ The application follows a **client-server architecture**, implemented in **Java*
 
 The project showcases database-driven application design, modular development, and multi-database compatibility.
 
+![image](https://github.com/user-attachments/assets/157377ce-28a9-45c0-9533-8c6ed45034dd)
