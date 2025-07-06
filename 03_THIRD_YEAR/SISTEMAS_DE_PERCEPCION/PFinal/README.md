@@ -29,4 +29,6 @@ You can find the full assignment brief in [`PRACTICA_Seguimiento_Color.pdf`](./P
 
 ---
 
+![image](https://github.com/user-attachments/assets/cbaceb54-e0e8-4f56-bb88-231048c2d769)
+
 
