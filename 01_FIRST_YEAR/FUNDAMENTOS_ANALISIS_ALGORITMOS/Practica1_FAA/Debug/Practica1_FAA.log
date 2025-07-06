@@ -1,9 +1,0 @@
-﻿  ConjuntoInt.cpp
-  Mtime.cpp
-  Principal.cpp
-  TestAlgoritmo.cpp
-C:\Users\danie\Desktop\Ing. Informatica\FAA\Practicas\Practica1_FAA\TestAlgoritmo.cpp(155,32): warning C4244: '=': conversión de 'double' a 'int'; posible pérdida de datos
-C:\Users\danie\Desktop\Ing. Informatica\FAA\Practicas\Practica1_FAA\TestAlgoritmo.cpp(223,8): warning C4101: 'posicion': variable local sin referencia
-C:\Users\danie\Desktop\Ing. Informatica\FAA\Practicas\Practica1_FAA\TestAlgoritmo.cpp(243,8): warning C4101: 'posicion': variable local sin referencia
-  Generando código...
-  Practica1_FAA.vcxproj -> C:\Users\danie\Desktop\Ing. Informatica\FAA\Practicas\Practica1_FAA\Debug\Practica1_FAA.exe

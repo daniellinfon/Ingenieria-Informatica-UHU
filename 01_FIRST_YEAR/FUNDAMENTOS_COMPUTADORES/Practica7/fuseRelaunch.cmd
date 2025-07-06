@@ -1,1 +1,0 @@
--intstyle "ise" -incremental -o "C:/Users/pablo/OneDrive/Escritorio/P7_FC/PRACTICA_7/TEST_SISTEMACOMPLETO_isim_beh.exe" -prj "C:/Users/pablo/OneDrive/Escritorio/P7_FC/PRACTICA_7/TEST_SISTEMACOMPLETO_beh.prj" "work.TEST_SISTEMACOMPLETO" 

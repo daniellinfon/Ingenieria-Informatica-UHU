@@ -1,2 +1,0 @@
-proyecto1.CanvasTunel
-proyecto1.vehiculo

@@ -1,9 +1,0 @@
-TIPO: AFD
-ESTADOS: q1 q2 q3 q5 q4
-INICIAL: q1
-FINALES: q5 q4
-TRANSICIONES:
-q1 'a' q2
-q2 'b' q4
-q4 'a' q4
-FIN

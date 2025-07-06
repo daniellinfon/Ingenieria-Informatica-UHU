@@ -1,7 +1,0 @@
-NAME : dataset-2
-TYPE : TSP
-COMMENT : -2 puntos para ejecutar
-DIMENSION : -2
-EDGE_WEIGHT_TYPE : EUC_2D
-NODE_COORD_SECTION
-EOF

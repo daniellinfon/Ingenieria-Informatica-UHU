@@ -1,1 +1,0 @@
-PruebaDos ::= 'l' 'l' ( 'o' | 'g' 'o' )* 'g' 'g';
