@@ -25,7 +25,7 @@ This project consists of a color-based object tracking system developed in MATLA
 
 ## 📄 Documentation
 
-You can find the full assignment brief in [`PRACTICA_Seguimiento Color.pdf`](./PRACTICA_Seguimiento Color.pdf), which outlines all the implementation phases and the expected tracking behavior.
+You can find the full assignment brief in [`PRACTICA_Seguimiento_Color.pdf`](./PRACTICA_Seguimiento Color.pdf), which outlines all the implementation phases and the expected tracking behavior.
 
 ---
 
